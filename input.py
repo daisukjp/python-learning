@@ -1,22 +1,23 @@
-# input()
+# while loop
+count = 0
+while count < 10:
+    print(count)
+    count += 1
 
-# age = input("How old are you?")
-# print("your are {} years old".format(age))
+# break & continue
 
+# while True:
+#     age = int(input("How old are you?"))
+#     if not 0 <= age < 120:
+#         print("invalid number")
+#         continue
+#     else:
+#         print(f"You are {age} years old")
+#         break
 
-# challenge1
-# age = int(input("How old are yop?"))
-age = 18
-# age = int(age)
+# challenge
+age = int(input("How old are you?"))
 casino_age = 18
-
-# if age >= 18:
-#     print("You cna enter the casino")
-# else: 
-#     print("You can not enter this casino because your are under {}".format(casino_age))
-
-
-# challenge 2
 
 game_text = """Choice what you want to play
 1: something1
@@ -26,16 +27,19 @@ game_text = """Choice what you want to play
 
 if age >= 18:
     print("You cna enter the casino")
-    game = input(game_text)
-    if game == '1':
-        print("You selected something1")
-    elif game == '2':
-        print("You selected something2")
-    elif game == '3':
-        print("You selected something3")
-    else:
-        print("You have to selecte between 1 to 3")
-    
-
-else: 
-    print("You can not enter this casino because your are under {}".format(casino_age))
+    while True:
+        game = input(game_text)
+        if game == '1':
+            print("You selected something1")
+            break
+        elif game == '2':
+            print("You selected something2")
+            break
+        elif game == '3':
+            print("You selected something3")
+            break
+        else:
+            print("You have to selected between 1 to 3")
+            continue
+else:
+    print("You can not enter this casino")
